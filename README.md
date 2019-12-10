@@ -9,6 +9,7 @@ SFTP is the FTP protocol build on top of the SSH protocol.
 - Create the destination directory if not exist.
 - If file already exist, re-create it.
 - Two authentication methods are available, **password** and **public key**
+- Debug mode
 ### Dependencies
 You need to install the Libssh2 library:[web site](https://www.libssh2.org/), [Git page](https://github.com/libssh2/libssh2).
 I used those instructions to install this library in windows 10 [How to install](https://github.com/libssh2/libssh2/blob/master/docs/INSTALL_CMAKE).
@@ -18,6 +19,10 @@ The project is in c language and to build it use any c complier.
 ```
 gcc -Wall -Wextra -g SFTP_Client.c -I '<path to libssh2>\include' -I '<path to openssl>\include' -L '<path to libssh2>\lib' -L '<path to openssl>\lib' -lssh2 -lws2_32 -lcrypto -lssl -o <file output name>
 ```
+In the source code comment or uncomment this line to enable or disable the debug mode before the compilation.
+``
+#define LIBSSH2DEBUG
+``
 ###  How to use?
 1. Pass the remote SSH ip: -ip <remote SSH ip>
 2. Pass the SSH port (22 is the default port number): -port <SSH port>
