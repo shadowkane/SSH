@@ -34,6 +34,7 @@ gcc -Wall -Wextra -g SFTP_Client.c -I '<path to libssh2>\include' -I '<path to o
 5. Pass file/directory to transfer (source path): -s <path to file/diretory>
 6. Pass destination path: -d <destination path>
 7. Transfer sub-directories: -r
+> Note that i included a public key and private key files so you know the format of those files. they don't works, make yours please. use any key generator like putty.
 ###  Example
  > change the file name to what you used before.
  * SFTP_Client.exe -ip <remote_machine_ip> -u <username> -p <password> -upload -s <source_path_from_your_local_machine> -d <destination_path_to_remote_machine> -r
