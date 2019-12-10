@@ -4,6 +4,7 @@ SFTP is the FTP protocol build on top of the SSH protocol.
 ###  Features:
 - Transfer in both directions. **download** and **upload**.
 - Transfer **file** and **directory**.
+- Auto detection if file or directory.
 - The option to transfer **sub-directories**.
 - Create the destination directory if not exist.
 - If file already exist, re-create it.
@@ -29,9 +30,9 @@ gcc -Wall -Wextra -g SFTP_Client.c -I '<path to libssh2>\include' -I '<path to o
     * Pass the path to the public key file: -pubk <path to public key>
     * Pass the path to the private key file: -prvk <path to private key>
     * The option to pass the passphrase is exist: -p <passphrase>
- 4- To upload use: -upload. to download use: -download
- 5- Pass file/directory to transfer (source path): -s <path to file/diretory>
- 6- Pass destination path: -d <destination path>
- 7- Transfer sub-directories: -r
+4. To upload use: -upload. to download use: -download
+5. Pass file/directory to transfer (source path): -s <path to file/diretory>
+6. Pass destination path: -d <destination path>
+7. Transfer sub-directories: -r
 
 
